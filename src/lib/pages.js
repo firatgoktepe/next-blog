@@ -108,8 +108,11 @@ export async function getAllPages() {
 
   const pages = data?.data.pages.edges.map(({ node = {} }) => node).map(mapPageData);
 
+  const filtered_home = pages.filter((e) => e.slug == 'aut-a-rerum-beatae');
+
   return {
     pages,
+    filtered_home,
   };
 }
 
@@ -121,6 +124,19 @@ export async function getTopLevelPages() {
   const { pages } = await getAllPages();
 
   const navPages = pages.filter(({ parent }) => parent === null);
+
+  // Order pages by menuOrder
+  navPages.sort((a, b) => parseFloat(a.menuOrder) - parseFloat(b.menuOrder));
+
+  return navPages;
+}
+
+/**Home menu from WP */
+
+export async function getMenuFromWp() {
+  const { filtered_home } = await getAllPages();
+
+  const navPages = filtered_home.filter(({ parent }) => parent === null);
 
   // Order pages by menuOrder
   navPages.sort((a, b) => parseFloat(a.menuOrder) - parseFloat(b.menuOrder));

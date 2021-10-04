@@ -5,7 +5,7 @@ import { SearchProvider } from 'hooks/use-search';
 
 import { getSiteMetadata } from 'lib/site';
 import { getRecentPosts } from 'lib/posts';
-import { getTopLevelPages } from 'lib/pages';
+import { getMenuFromWp } from 'lib/pages';
 import { getCategories } from 'lib/categories';
 import { getAllMenus, createMenuFromPages, MENU_LOCATION_NAVIGATION_DEFAULT } from 'lib/menus';
 
@@ -43,7 +43,7 @@ App.getInitialProps = async function (appContext) {
 
   const defaultNavigation = createMenuFromPages({
     locations: [MENU_LOCATION_NAVIGATION_DEFAULT],
-    pages: await getTopLevelPages(),
+    pages: await getMenuFromWp(),
   });
 
   menus.push(defaultNavigation);

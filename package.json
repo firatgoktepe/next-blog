@@ -1,9 +1,8 @@
 {
   "name": "next-wordpress-starter",
-  "homepage": "https://next-wordpress-starter.spacejelly.dev",
-  "version": "0.1.0",
-  "license": "MIT",
-  "author": "Colby Fayock <hello@colbyfayock.com>",
+  "homepage": "https://next-headlesswp-blog.netlify.app",
+  "version": "1.0.0",
+  "author": "Firat Goktepe <firatgoktepe1986@gmail.com>",
   "scripts": {
     "build": "next build && next export",
     "wpe-build": "npm run build",
@@ -54,12 +53,5 @@
     "husky": "4.3.8",
     "lint-staged": ">=11.1.2",
     "prettier": "2.3.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/colbyfayock/next-wordpress-starter"
-  },
-  "bugs": {
-    "url": "https://github.com/colbyfayock/next-wordpress-starter/issues"
   }
 }
