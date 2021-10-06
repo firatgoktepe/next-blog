@@ -2,6 +2,11 @@
 
 <p>Blog page built with NextJs by using fake data</p>
 
+<ul>
+<li>NextJs</li>
+<li>Headless Wordpress</li>	
+</ul>
+
 <h2>🚀 Demo</h2>
 
 [https://firat-nextjs-fakeblog.netlify.app/](https://firat-nextjs-fakeblog.netlify.app/)
