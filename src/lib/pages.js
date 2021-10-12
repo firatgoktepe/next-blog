@@ -108,7 +108,13 @@ export async function getAllPages() {
 
   const pages = data?.data.pages.edges.map(({ node = {} }) => node).map(mapPageData);
 
-  const filtered_home = pages.filter((e) => e.slug == 'aut-a-rerum-beatae');
+  const filtered_home = pages.filter(
+    (e) =>
+      e.slug === 'aut-a-rerum-beatae' ||
+      e.slug === 'unde-fugiat-et-nesciunt' ||
+      e.slug === 'dolorem-ut-sit-et-rem' ||
+      e.slug === 'debitis-nisi-vel-autem'
+  );
 
   return {
     pages,
