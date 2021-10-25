@@ -9,7 +9,7 @@
 
 <h2>🚀 Demo</h2>
 
-[https://firat-nextjs-fakeblog.netlify.app/](https://firat-nextjs-fakeblog.netlify.app/)
+live link: [https://firat-nextjs-fakeblog.netlify.app/](https://firat-nextjs-fakeblog.netlify.app/)
 
 <h2>🛠️ Installation Steps:</h2>
 
